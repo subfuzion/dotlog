@@ -1,6 +1,57 @@
-# Build Folders (you can keep bin if you'd like, to store dlls and pdbs)
-bin
-obj
+﻿# ============================
+# General Windows ignore files
+# ============================
+Thumbs.db
 
-# mstest test results
-TestResults
+# ============================
+# Visual Studio ignore files
+# ============================
+*.aps
+*.bak
+*.cache
+*.ilk
+*.lib
+*.log
+*.ncb
+*.obj
+*.pch
+*.pdb
+*.sbr
+*.suo
+*.docstates
+*.tlb
+*.tlh
+*.user
+*.vspscc
+*.xap
+*.xbap
+*_i.c
+*_p.c
+[Bb]in/
+ClientBin/
+[Dd]ebug*/
+[Oo]bj/
+[Rr]elease*/
+[Tt]est[Rr]esult*
+
+# Azure
+ServiceDefinition.build.csdef
+_bin*/
+
+# CodeSmart
+*.csproj.vs10x
+
+# Silverlight
+[Gg]enerated_[Cc]ode/
+
+# ReSharper ignore files
+_ReSharper*/
+*[Rr]esharper*
+[Tt]est[Rr]esult*
+
+# ============================
+# MonoDevelop
+# ============================
+*.userprefs
+*.pidb
+
