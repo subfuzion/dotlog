@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+		<id>DotLog</id>
+		<version>1.0.0</version>
+		<authors>Tony Pujals</authors>
+		<owners>Tony Pujals</owners>
+		<licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
+		<projectUrl>https://github.com/tonypujals/dotlog</projectUrl>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<description>Minimalist logging library for .NET</description>
+		<releaseNotes>Supports ConsoleLogger and a rolling FileLogger.</releaseNotes>
+		<copyright>Copyright (c) 2012, Tony Pujals</copyright>
+		<tags>Log Logging</tags>
+  </metadata>
+</package>
