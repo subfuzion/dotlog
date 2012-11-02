@@ -3,7 +3,7 @@
 ## Minimalist logging library for .NET
 
 Available via Nuget:  
-https://nuget.org/packages/DotLog/1.0.0
+https://nuget.org/packages/DotLog/
 
 There are a number of good logging options for .NET applications, and if your needs are
 sophisticated, they can be indispensable.
