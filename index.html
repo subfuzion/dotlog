@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>DotLog by tonypujals</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>DotLog</h1>
+        <p>Minimalist logging library for .NET</p>
+
+        <p class="view"><a href="https://github.com/tonypujals/dotlog">View the Project on GitHub <small>tonypujals/dotlog</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/tonypujals/dotlog/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/tonypujals/dotlog/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/tonypujals/dotlog">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h2>Minimalist logging library for .NET</h2>
+
+<p>Available via Nuget:<br><a href="https://nuget.org/packages/DotLog/">https://nuget.org/packages/DotLog/</a></p>
+
+<p>There are a number of good logging options for .NET applications, and if your needs are
+sophisticated, they can be indispensable.</p>
+
+<p>On the other hand, there are times when a really simple logging library can be useful.
+This library was designed to make it easy to log to the console or to a rolling file.</p>
+
+<p>It provides a Common.Logging API adapter, which you can choose to use so that you're
+not boxed in a corner if your need for a more powerful logging framework evolves.</p>
+
+<p>This logging framework was designed to provide a balance between the following goals:</p>
+
+<ul>
+<li>simple</li>
+<li>flexible</li>
+<li>lightweight</li>
+<li>reasonably fast</li>
+<li>reasonable defaults</li>
+</ul><p>To use the provided ConsoleLogger or FileLogger, there is no dependency on any other frameworks,
+unless you choose to use the Common.Logging adapter.</p>
+
+<p>Even without using the Common.Logging adapter, if it ever becomes necessary to use another logging
+framework (such as Microsoft Enterprise Logging), a custom adapter can easily be created by
+implementing the ILogger interface.</p>
+
+<p>There is no static Log class or static log method. Ideally, applications should create concrete loggers via IOC
+containers or factories. However, the Common.Logging API does provide a static LogManager class.</p>
+
+<p>An example of using an IOC container or a factory class might look like the following:</p>
+
+<p>var logger = Container.Resolve();</p>
+
+<p>or</p>
+
+<p>var logger = LogFactory.CreateLogger();</p>
+
+<h3>Examples of explicitly creating a logger and using it:</h3>
+
+<div class="highlight"><pre><span class="c1">// create a logger that outputs to the console using default log level (Information)</span>
+<span class="kt">var</span> <span class="n">logger</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Logger</span><span class="p">(</span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">);</span>
+
+<span class="c1">// alternatively, use the provided ConsoleLogger</span>
+<span class="kt">var</span> <span class="n">logger</span> <span class="p">=</span> <span class="k">new</span> <span class="n">ConsoleLogger</span><span class="p">();</span>
+
+<span class="c1">// specify the log level (this example will write all entries</span>
+<span class="c1">// from verbose through critical)</span>
+<span class="kt">var</span> <span class="n">logger</span> <span class="p">=</span> <span class="k">new</span> <span class="n">ConsoleLogger</span> <span class="p">{</span><span class="n">LogLevel</span> <span class="p">=</span> <span class="n">LogLevel</span><span class="p">.</span><span class="n">Verbose</span><span class="p">};</span>
+
+<span class="c1">// create a file logger; by default this will create a rolling log file</span>
+<span class="c1">// that will continue logging to the same file for the life of this logger</span>
+<span class="c1">// (to support session based logging).</span>
+<span class="kt">var</span> <span class="n">logger</span> <span class="p">=</span> <span class="k">new</span> <span class="n">FileLogger</span><span class="p">();</span>
+
+<span class="c1">// provide a file name template. This example will create logs</span>
+<span class="c1">// named testlog-001.log, testlog-002.log, etc.</span>
+<span class="n">logger</span><span class="p">.</span><span class="n">FileNameTemplate</span> <span class="p">=</span> <span class="s">"testlog-###.log"</span>
+
+<span class="c1">// log something</span>
+<span class="n">logger</span><span class="p">.</span><span class="n">Log</span><span class="p">(</span><span class="s">"test log message"</span><span class="p">);</span>
+
+<span class="c1">// the default log level is LogLevel.Verbose, so this does the same thing:</span>
+<span class="n">logger</span><span class="p">.</span><span class="n">Log</span><span class="p">(</span><span class="s">"test log message"</span><span class="p">,</span> <span class="n">LogLevel</span><span class="p">.</span><span class="n">Verbose</span><span class="p">);</span>
+
+<span class="c1">// Specifiy a category when logging (the default is "General")</span>
+<span class="n">logger</span><span class="p">.</span><span class="n">Log</span><span class="p">(</span><span class="s">"test log message"</span><span class="p">,</span> <span class="n">LogLevel</span><span class="p">.</span><span class="n">Verbose</span><span class="p">,</span> <span class="s">"Test Category"</span><span class="p">);</span>
+</pre></div>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/tonypujals">tonypujals</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
