@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Common.Logging.DotLog</id>
-    <version>1.1.0</version>
+    <version>1.2.0</version>
 		<authors>Tony Pujals</authors>
 		<owners>Tony Pujals</owners>
 		<licenseUrl>http://tonypujals.github.com/dotlog/license.html</licenseUrl>

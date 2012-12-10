@@ -22,9 +22,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{D2E6C0
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".deployment", ".deployment", "{9A4AB748-4D53-4DAE-9B4D-D132675D0634}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DotLog", "DotLog", "{3517BB62-0C12-4A35-8B30-8553785A53F3}"
 	ProjectSection(SolutionItems) = preProject
-		.deployment\Common.Logging.DotLog\Common.Logging.DotLog.dll.nuspec = .deployment\Common.Logging.DotLog\Common.Logging.DotLog.dll.nuspec
-		.deployment\DotLog\DotLog.dll.nuspec = .deployment\DotLog\DotLog.dll.nuspec
+		.deployment\DotLog\DotLog.nuspec = .deployment\DotLog\DotLog.nuspec
+		.deployment\DotLog\package.cmd = .deployment\DotLog\package.cmd
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Commons.Logging.DotLog", "Commons.Logging.DotLog", "{BEFE14A4-093E-4E08-8749-F77BA038D73D}"
+	ProjectSection(SolutionItems) = preProject
+		.deployment\Common.Logging.DotLog\Common.Logging.DotLog.nuspec = .deployment\Common.Logging.DotLog\Common.Logging.DotLog.nuspec
+		.deployment\Common.Logging.DotLog\package.cmd = .deployment\Common.Logging.DotLog\package.cmd
 	EndProjectSection
 EndProject
 Global
@@ -56,5 +64,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3517BB62-0C12-4A35-8B30-8553785A53F3} = {9A4AB748-4D53-4DAE-9B4D-D132675D0634}
+		{BEFE14A4-093E-4E08-8749-F77BA038D73D} = {9A4AB748-4D53-4DAE-9B4D-D132675D0634}
 	EndGlobalSection
 EndGlobal

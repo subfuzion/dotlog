@@ -2,14 +2,14 @@
 <package >
   <metadata>
 		<id>DotLog</id>
-		<version>1.1.0</version>
+		<version>1.2.0</version>
 		<authors>Tony Pujals</authors>
 		<owners>Tony Pujals</owners>
 		<licenseUrl>http://tonypujals.github.com/dotlog/license.html</licenseUrl>
 		<projectUrl>http://tonypujals.github.com/dotlog/</projectUrl>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
 		<description>Minimalist logging library for .NET</description>
-		<releaseNotes>Supports ConsoleLogger and a session-based FileLogger. Switched to MIT License.</releaseNotes>
+		<releaseNotes>Minor update to LogLevel class.</releaseNotes>
 		<copyright>Copyright (c) 2012, Tony Pujals</copyright>
 		<tags>Log Logging</tags>
   </metadata>
