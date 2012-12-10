@@ -1,8 +1,9 @@
 # DotLog
 Minimalist logging library for .NET
 
+- <a href="http://tonypujals.github.com/dotlog/">DotLog website</a>
+- <a href="https://github.com/tonypujals/dotlog/">Source on Github</a>
 - <a href="https://nuget.org/packages/DotLog/">Install via Nuget</a>
-- <a href="https://github.com/tonypujals/dotlog">Source on Github</a>
 
 ## Overview
 
