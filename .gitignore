@@ -1,7 +1,8 @@
-﻿# ============================
-# General Windows ignore files
+# ============================
+# General ignore files
 # ============================
 Thumbs.db
+.DS_Store
 
 # ============================
 # Visual Studio ignore files
@@ -55,3 +56,5 @@ _ReSharper*/
 *.userprefs
 *.pidb
 
+
+.DS_Store
