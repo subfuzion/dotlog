@@ -55,3 +55,9 @@ _ReSharper*/
 *.userprefs
 *.pidb
 
+# ============================
+# Nuget
+# ============================
+*.nupkg
+.deployment/lib/
+
