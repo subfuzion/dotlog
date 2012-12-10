@@ -58,6 +58,5 @@ _ReSharper*/
 # ============================
 # Nuget
 # ============================
-*.nupkg
-.deployment/lib/
-
+/.deployment/**/*.nupkg
+/.deployment/**/lib/
