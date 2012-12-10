@@ -30,32 +30,32 @@ namespace DotLog
 		/// <summary>
 		///   Nothing will be logged.
 		/// </summary>
-		None = 0,
+		None = 10,
 
 		/// <summary>
 		///   Log critical errors that require the application to terminate.
 		/// </summary>
-		Critical = 1,
+		Critical = 8,
 
 		/// <summary>
 		///   Log exceptional errors
 		///   (the application will continue to run although important functionality is unavailable).
 		/// </summary>
-		Error = 2,
+		Error = 6,
 
 		/// <summary>
 		///   Log warnings that indicate issues that ought to be addressed.
 		/// </summary>
-		Warning = 3,
+		Warning = 4,
 
 		/// <summary>
 		///   Log informational events, such as successful initialization.
 		/// </summary>
-		Information = 4,
+		Information = 2,
 
 		/// <summary>
 		///   Log details useful for debugging or tracing through code execution.
 		/// </summary>
-		Verbose = 5,
+		Verbose = 0,
 	}
 }

@@ -84,7 +84,7 @@ namespace DotLog
 				Category = category,
 			};
 
-			if (LogAction != null && logLevel != LogLevel.None && logLevel <= LogLevel)
+			if (LogAction != null && logLevel != LogLevel.None && logLevel >= LogLevel)
 			{
 				// if Formatter is null, generates a default formatted string
 				var output = logEntry.ToString(Formatter);
