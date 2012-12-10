@@ -1,0 +1,10 @@
+#legal {
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+  font-size: 0.9em;
+  line-height: 1.1em;
+}
+
+#legal h1 h2 h3 h4 {
+	font-family: Arial, Helvetica, sans-serif;
+	color: black;
+}
