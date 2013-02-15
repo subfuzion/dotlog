@@ -77,4 +77,4 @@ logger.Log("test log message", LogLevel.Verbose);
 logger.Log("test log message", LogLevel.Verbose, "Test Category");
 ```
 
-&copy; 2012, Tony Pujals. <a href="http://tonypujals.github.com/dotlog/">DotLog</a> is <a href="http://opensource.org/">Open Source</a> and available under the <a href="license.html">MIT License</a>
+&copy; 2012, 2013, Tony Pujals. <a href="http://tonypujals.github.com/dotlog/">DotLog</a> is <a href="http://opensource.org/">Open Source</a> and available under the <a href="license.html">MIT License</a>
