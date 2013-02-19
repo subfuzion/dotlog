@@ -66,6 +66,7 @@
     <Compile Include="ConsoleLogger.cs" />
     <Compile Include="FileLogging\FileDeletionPolicy.cs" />
     <Compile Include="FileLogging\RollingLogFile.cs" />
+    <Compile Include="LogExtensions.cs" />
     <Compile Include="Logger.cs" />
     <Compile Include="FileLogger.cs" />
     <Compile Include="FormatSpecification.cs" />
