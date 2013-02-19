@@ -60,6 +60,7 @@ namespace DotLog
 
 		/// <summary>
 		///   Gets or sets the formatter for formatting the log entry.
+		///   If not null, the formatter is invoked by the Log method.
 		/// </summary>
 		public ILogFormatter Formatter { get; set; }
 

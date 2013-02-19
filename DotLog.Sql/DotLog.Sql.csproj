@@ -4,16 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8DCDE284-4648-4AEC-9CC0-CBD37855B4C3}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{3F30D06D-9E03-44E1-BC8E-67E73496E5CD}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DotLog.Example</RootNamespace>
-    <AssemblyName>DotLog.Example</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <RootNamespace>DotLog.Sql</RootNamespace>
+    <AssemblyName>DotLog.Sql</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,7 +23,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -32,21 +31,24 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="LogContext.cs" />
+    <Compile Include="LogRecord.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlLogger.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DotLog.Sql\DotLog.Sql.csproj">
-      <Project>{3f30d06d-9e03-44e1-bc8e-67e73496e5cd}</Project>
-      <Name>DotLog.Sql</Name>
-    </ProjectReference>
     <ProjectReference Include="..\dotlog\DotLog.csproj">
       <Project>{7cc6075e-cb3c-4577-a6d4-9c6aa96a3162}</Project>
       <Name>DotLog</Name>

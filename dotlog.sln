@@ -35,6 +35,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Commons.Logging.DotLog", "C
 		.deployment\Common.Logging.DotLog\package.cmd = .deployment\Common.Logging.DotLog\package.cmd
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotLog.Sql", "DotLog.Sql\DotLog.Sql.csproj", "{3F30D06D-9E03-44E1-BC8E-67E73496E5CD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -61,6 +63,10 @@ Global
 		{BF7371B8-B9EC-474E-B7B7-9C9B6108B849}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BF7371B8-B9EC-474E-B7B7-9C9B6108B849}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BF7371B8-B9EC-474E-B7B7-9C9B6108B849}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F30D06D-9E03-44E1-BC8E-67E73496E5CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F30D06D-9E03-44E1-BC8E-67E73496E5CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F30D06D-9E03-44E1-BC8E-67E73496E5CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F30D06D-9E03-44E1-BC8E-67E73496E5CD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

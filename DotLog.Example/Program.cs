@@ -32,6 +32,7 @@
 namespace DotLog.Example
 {
 	using System;
+	using Sql;
 
 	internal class Program
 	{
@@ -40,6 +41,7 @@ namespace DotLog.Example
 			DemoSimpleLogger();
 			DemoConsoleLogger();
 			DemoFileLogger();
+			DemoSqlLogger();
 
 			Console.WriteLine("press any key to exit");
 			Console.ReadKey();
@@ -71,12 +73,24 @@ namespace DotLog.Example
 			};
 
 			logger.Log("test entry 1");
-
 			logger.Log("test entry 2", LogLevel.Verbose);
-
 			logger.Log("test entry 3", LogLevel.Verbose, "example category");
 
 			Console.WriteLine("log saved to: " + logger.FullPathName);
 		}
+
+		private static void DemoSqlLogger()
+		{
+			Console.Write("using file logger ... ");
+
+			var logger = new SqlLogger();
+
+			logger.Log("test entry 1");
+			logger.Log("test entry 2", LogLevel.Verbose);
+			logger.Log("test entry 3", LogLevel.Verbose, "example category");
+
+			Console.WriteLine("log saved to database");
+		}
+
 	}
 }
