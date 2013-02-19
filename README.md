@@ -11,7 +11,7 @@ There are a number of great logging options for .NET applications, but sometimes
 
 The goal for DotLog is to provide a simple, lightweight solution that makes it easy to add file logging to your project while not making it difficult to switch to another logging framework as your application's requirements evolve.
 
-DotLog only provides two loggers: a trivial console logger and a session-based file logger. There is no dependency on any other framework, unless you choose to use the available <a href="http://netcommon.sourceforge.net/">Common.Logging</a> adapter to make it easier to switch to another logging framework in the future. Commons.Logging is a logging facade that supports a number of .NET logging solutions, such as Microsoft Enterprise Logging, NLog, and log4net.
+DotLog provides three loggers: a trivial console logger, a session-based file logger, and a SQL Server logger. There is no dependency on any other framework, unless you choose to use the available <a href="http://netcommon.sourceforge.net/">Common.Logging</a> adapter to make it easier to switch to another logging framework in the future. Commons.Logging is a logging facade that supports a number of .NET logging solutions, such as Microsoft Enterprise Logging, NLog, and log4net.
 
 Even without using the Common.Logging adapter, if it ever becomes necessary to use another logging
 framework, a custom adapter can easily be created by implementing the ILogger interface.
